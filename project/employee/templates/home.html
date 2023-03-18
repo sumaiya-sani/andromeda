@@ -1,0 +1,196 @@
+{% load static %}
+	<!doctype html>
+	<html lang="en" dir="ltr">
+	  <head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="assets/css/bootstrap.rtl.min.css" integrity="sha384-+qdLaIRZfNu4cVPK/PxJJEy0B0f3Ugv8i482AKY7gwXwhaCroABd086ybrVKTa0q" crossorigin="anonymous">
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/datatables.min.css"/>
+		<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&display=swap" rel="stylesheet">
+		
+		<style>
+		
+					
+			button {
+			  background-color: #6765fc;
+			  color: white;
+			  padding: 0.8rem 2rem;
+			  border: none;
+			  border-radius: 5px;
+			  font-size: 1.2rem;
+			  margin: 1rem;
+			  cursor: pointer;
+			  transition: all 0.2s ease-in-out;
+			  animation: fadeInRight 1s ease-in-out;
+			}
+		
+
+			.order-card {
+				color: #fff;
+			}
+
+			.bg-c-blue {
+				background: linear-gradient(45deg,#4099ff,#73b4ff);
+			}
+
+			.bg-c-green {
+				background: linear-gradient(45deg,#2ed8b6,#59e0c5);
+			}
+
+			.bg-c-yellow {
+				background: linear-gradient(45deg,#FFB64D,#ffcb80);
+			}
+
+			.bg-c-pink {
+				background: linear-gradient(45deg,#FF5370,#ff869a);
+			}
+
+
+			.card {
+				border-radius: 5px;
+				-webkit-box-shadow: 0 1px 2.94px 0.06px rgba(4,26,55,0.16);
+				box-shadow: 0 1px 2.94px 0.06px rgba(4,26,55,0.16);
+				margin-bottom: 30px;
+				-webkit-transition: all 0.3s ease-in-out;
+				transition: all 0.3s ease-in-out;
+			}
+
+			.card .card-block {
+				padding: 25px;
+			}
+
+			.order-card i {
+				font-size: 26px;
+			}
+
+			.f-left {
+				float: left;
+			}
+
+			.f-right {
+				float: right;}
+
+		
+		</style>
+		
+	</head>
+  	  <body>
+		<center>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<img src="https://i.ibb.co/9TRtjkV/Whats-App-Image-2023-03-18-at-11-24-10-AM.jpg" alt="My Website Logo" style="width: 200px; height: auto;">
+    	  
+
+        
+        </nav>
+
+        <!-- Button trigger modal -->
+		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+		  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<i class="fa fa-user "></i> Profile
+			 <span class="navbar-toggler-icon"></span>
+			</button>
+		   
+		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+		  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<i class="fa fa-tasks"> </i> Tasks
+			 <span class="navbar-toggler-icon"></span>
+           </a> 
+		   </button>
+		   
+		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+		  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <i class="fa fa-bell"></i> Notifications
+			 <span class="navbar-toggler-icon"></span>
+           </a> </button>
+		   
+		 
+		<hr>		
+
+  
+
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+	<div class="container">
+		
+	  <div class="card-col-3">
+		<div class="card-body">
+			<div class="card-body" >
+	  <img class="card-img-top-block" src="https://i0.wp.com/greatplacetowork.me/wp-content/uploads/2022/02/0329f73d-4f66-46a0-9507-057e52f733b6.png?fit=800%2C427&ssl=1" alt="Card image cap">
+	  <div class="card-body">
+		<h2 class="card-title"><b>Data collection</b></h2>
+			
+
+		<p align="left | right | center" style="font-size:140%;">
+
+		This task is designed to  test trainees in the basic knowledge and skills<br>
+		necessary to collect,manage, and analyze data. The task will cover various<br> 
+		methods of data collection, including surveys, interviews, observations, <br> 
+		and experiments. Trainees will also learn how to organize and manage <br> 
+		data using software tools such as Microsoft Excel.
+
+		</p>	
+
+		<button><a href="{% url 'home_question' %}"  class="btn btn-primary">Start Training</a></button>
+	  </div>
+	  </div>
+	  	
+
+		<br>
+	
+		</div>
+		</div>
+	</div>
+	
+	
+	<div class="container">
+		
+	  <div class="card-col-3">
+		<div class="card-body">
+			<div class="card-body">
+	  <img class="card-img-top-block" src="https://i0.wp.com/greatplacetowork.me/wp-content/uploads/2022/02/16b1fda0-f36b-41f1-9a59-6cce592940cc.png?fit=800%2C451&ssl=1" 
+	  alt="Card image cap">
+
+
+	  <div class="card-body">
+		<h2 class="card-title"><b>Data processing</b></h2>
+			
+
+		<p align="left | right | center" style="font-size:140%;">
+
+		This task is designed to  test trainees in the basic knowledge and skills<br>
+		necessary to collect,manage, and analyze data. The task will cover various<br> 
+		methods of data collection, including surveys, interviews, observations, <br> 
+		and experiments. Trainees will also learn how to organize and manage <br> 
+		data using software tools such as Microsoft Excel.
+
+		</p>	
+
+		<button><a href="{% url 'home_question' %}" class="btn btn-primary">Start Training</a></button>
+	  </div>
+	  </div>
+	  	
+
+		<br>
+	
+		</div>
+		</div>
+	</div>
+	
+	
+		<hr>
+		
+		<footer class="container">
+		  <p style="text-align: center;">2023 made by <b>Tutelage Team</b> for the better Chat GPT idea.</p>
+		</footer>
+		<!-- Option 1: Bootstrap Bundle with Popper -->
+		<script type="text/javascript" src="assets/js/datatables.min.js"></script>
+		<script type="text/javascript" src="assets/js/jquery-3.5.1.js"></script>
+		<script type="text/javascript" src="assets/js//jquery.dataTables.min.js"></script>
+		<script src="assets/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+		
+	  </body>
+	</html>

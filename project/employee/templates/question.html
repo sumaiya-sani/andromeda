@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+      body {
+  font-family: sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 3rem;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  border: none;
+  background-color: #1E90FF;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #4169E1;
+}
+
+input {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+body {
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+form {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  margin: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  animation: fadeInRight 1s ease-in-out;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+
+p, label {
+  font-size: 1.2rem;
+  margin: 1rem;
+  animation: fadeInLeft 1s ease-in-out;
+}
+
+input {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin: 1rem;
+  animation: fadeInRight 1s ease-in-out;
+}
+
+.chatbot-response {
+  color: #FF6B6B;
+}
+
+.error {
+  color: #FF6B6B;
+}
+
+/* Animations */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes fadeInRight {  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+
+
+    </style>
+</head>
+<body>
+
+    <h1>Welocme to our company training session </h1>
+    <form method="POST">
+        {% csrf_token %}
+        <p>Click the button to display a random question:</p>
+        <button type="submit" name="question_button">Display Question</button>
+        {% if question %}
+          <p>{{ question }}</p>
+          <label for="user_answer">Your Answer:</label>
+          <input type="text" id="user_answer" name="user_answer">
+          <button type="submit" name="answer_button">Submit Answer</button>
+        {% endif %}
+        {% if chatbot_response %}
+          <p>Chatbot Response: {{ chatbot_response }}</p>
+        {% endif %}
+
+        
+      </form>
+  
+
+    
+
+</body>
+
+</html>
